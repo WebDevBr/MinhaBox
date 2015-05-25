@@ -308,7 +308,7 @@ class mysql::params {
     },
     'mysqld'                  => {
       'basedir'               => $mysql::params::basedir,
-      'bind-address'          => '127.0.0.1',
+      'bind-address'          => '0.0.0.0',
       'datadir'               => $mysql::params::datadir,
       'expire_logs_days'      => '10',
       'key_buffer_size'       => '16M',
@@ -321,7 +321,8 @@ class mysql::params {
       'port'                  => '3306',
       'query_cache_limit'     => '1M',
       'query_cache_size'      => '16M',
-      'skip-external-locking' => true,
+      'skip-external-locking' => false,
+      'skip-grant-tables'     => true,
       'socket'                => $mysql::params::socket,
       'ssl'                   => false,
       'ssl-ca'                => $mysql::params::ssl_ca,

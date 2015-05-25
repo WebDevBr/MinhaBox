@@ -1,0 +1,10 @@
+vagrantfile:
+    target: local
+    vm:
+        network:
+            private_network: 192.168.56.101
+            forwarded_port:
+                vflnp_zanlj9ste1gi:
+                    host: '3306'
+                    guest: '3306'
+
